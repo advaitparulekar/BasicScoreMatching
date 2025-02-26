@@ -2,14 +2,14 @@
 
 To train the VAE:
 
-> python3 trainVAE.py -config <config_path>
+```python3 trainVAE.py -config <config_path>```
 
 To train the score network
 
-> python3 experiment.py -config <config_path>
+```python3 experiment.py -config <config_path>```
 
 To scale up the model, change the unet_params section in the config file. For instance:
-
+```
 unet_params:
   image_size: *latent_size
   layers_per_block: 4
@@ -38,5 +38,5 @@ unet_params:
       num_classes : 9
       cond_drop_prob : 0.1
   feature_out: True
-
+```
   Results in about 100M parameters.
