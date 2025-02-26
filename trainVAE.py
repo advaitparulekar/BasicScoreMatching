@@ -22,7 +22,6 @@ def train(args):
             config = yaml.safe_load(file)
         except yaml.YAMLError as exc:
             print(exc)
-    print(config)
 
     torch.set_default_device(config["device"])
     device = torch.device(config["device"])

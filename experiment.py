@@ -41,6 +41,6 @@ if __name__ == '__main__':
     torch.set_default_device(config["device"])
 
     sampler = MNISTSampler(config["score_sampler_params"])
-    CDMModel = Diffusion.Diffuser(config)
+    model = Diffusion.Diffuser(config)
 
-    CDMModel.train_loop(sampler)
+    model.train_loop(sampler)

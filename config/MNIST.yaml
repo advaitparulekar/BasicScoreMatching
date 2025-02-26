@@ -4,8 +4,6 @@ define: &latent_size 8
 define: &device 'cuda'
 define: &vae_file 'VAE/models/MNIST.pth'
 define: &save_file 'models/MNIST.pth'
-
-
 device: *device
 
 
@@ -25,12 +23,6 @@ pretrain_encoder_params:
 pretrain_training_params:
   learning_rate: 0.0003
   num_epochs: 30
-  log_interval: 100
-  vae_file: *vae_file
-
-fine_tune_params:
-  learning_rate: 0.0003
-  num_epochs: 1
   log_interval: 100
   vae_file: *vae_file
   
