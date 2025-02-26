@@ -32,11 +32,11 @@ unet_params:
   num_mid_layers: 2
   num_head_mid_layers: 4
   num_up_layers: 2
-  #condition_config:
-  #  condition_types: ['class']
-  #  class_condition_config :
-  #    num_classes : 9
-  #    cond_drop_prob : 0.1
+  condition_config:
+    condition_types: ['class']
+    class_condition_config :
+      num_classes : 9
+      cond_drop_prob : 0.1
   feature_out: True
 
   Results in about 100M parameters.
